@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <name>ur5_gazebo</name>
+  <version>0.0.0</version>
+  <description>
+      Gazebo wrapper for the Universal UR5 robot arms.
+  </description>
+
+  <maintainer email="willie5588912@gmail.com">Wei Shih</maintainer>
+
+  <license>TODO</license>
+
+  <url type="website">http://ros.org/wiki/ur_gazebo</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>ur5_description</run_depend>
+  <run_depend>gazebo_ros_pkgs</run_depend>
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>gazebo_ros_control</run_depend>
+  <run_depend>ros_controllers</run_depend>
+  <run_depend>joint_state_controller</run_depend>
+  <run_depend>joint_trajectory_controller</run_depend>
+  <run_depend>effort_controllers</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  
+
+  <export>
+  </export>
+</package>

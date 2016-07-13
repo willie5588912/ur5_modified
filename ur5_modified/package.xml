@@ -1,0 +1,25 @@
+<package>
+  <name>ur5_modified</name>
+  <version>0.0.0</version>
+  <description>
+      Drivers, description, and utilities for Universal Robot Arms.
+  </description>
+
+  <maintainer email="willie5588912@gmail.com">Wei Shih</maintainer>
+
+  <license>TODO</license>
+
+  <url type="website">http://ros.org/wiki/universal_robot</url>
+
+  <author email="willie5588912@gmail.com">Wei Shih</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>ur5_description</run_depend>
+  <run_depend>ur5_gazebo</run_depend>
+  <run_depend>ur5_moveit_config</run_depend>
+  <run_depend>ur5_ros_control</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>
