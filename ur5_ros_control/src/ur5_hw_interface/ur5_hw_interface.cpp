@@ -67,19 +67,19 @@ Ur5HwInterface::~Ur5HwInterface()
 
 void Ur5HwInterface::read()
 {
-  std::cout << "read:" << std::endl;
+  //std::cout << "read:" << std::endl;
   for(size_t i = 0; i < n_dof_; i++)
   {
     jnt_curr_pos_[i] = jnt_cmd_pos_[i];
-    std::cout << jnt_names_[i] << ": "<< jnt_curr_pos_[i] << std::endl;
+    //std::cout << jnt_names_[i] << ": "<< jnt_curr_pos_[i] << std::endl;
   }
 
-  std::cout << std::endl; 
+  //std::cout << std::endl; 
 }
 
 void Ur5HwInterface::write()
 {
-  std::cout << "write:" << std::endl;
+  std::cout << "write at " << std::setprecision(13) << ros::Time::now().toSec() << " s : " << std::endl;
   for(size_t i = 0; i < n_dof_; i++)
     std::cout << jnt_names_[i] << ": "<< jnt_cmd_pos_[i] << std::endl;
 
@@ -93,7 +93,7 @@ ros::Time Ur5HwInterface::getTime() const
 
 ros::Duration Ur5HwInterface::getPeriod() const 
 {
-    return ros::Duration(0.1);
+    return ros::Duration(0.001);
 }
 #if 0
   using namespace hardware_interface;
