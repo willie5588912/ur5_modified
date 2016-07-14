@@ -24,7 +24,6 @@ Ur5HwInterface::Ur5HwInterface():
   jnt_cmd_pos_.clear();
  
   // Joints
-  std::vector<std::string> jnt_names_;
   jnt_names_.push_back("shoulder_pan_joint");
   jnt_names_.push_back("shoulder_lift_joint");
   jnt_names_.push_back("elbow_joint");
@@ -68,12 +67,23 @@ Ur5HwInterface::~Ur5HwInterface()
 
 void Ur5HwInterface::read()
 {
-    std::cout << "read!" << std::endl;
+  std::cout << "read:" << std::endl;
+  for(size_t i = 0; i < n_dof_; i++)
+  {
+    jnt_curr_pos_[i] = jnt_cmd_pos_[i];
+    std::cout << jnt_names_[i] << ": "<< jnt_curr_pos_[i] << std::endl;
+  }
+
+  std::cout << std::endl; 
 }
 
 void Ur5HwInterface::write()
 {
-    std::cout << "write" << std::endl;
+  std::cout << "write:" << std::endl;
+  for(size_t i = 0; i < n_dof_; i++)
+    std::cout << jnt_names_[i] << ": "<< jnt_cmd_pos_[i] << std::endl;
+
+  std::cout << std::endl;
 }
 
 ros::Time Ur5HwInterface::getTime() const 
